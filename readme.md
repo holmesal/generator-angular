@@ -2,8 +2,15 @@
 
 > Yeoman generator for AngularJS + Firebase - lets you quickly set up a project with sensible defaults and best practises.
 
-## Considerations
+## Differences from generator-angular
+* Scaffolds out with firebase included
+* Uses html5 mode by default
+
+## Dangerous things
 * Only implemented for coffeescript so far.
+
+## TODO
+* Add router resolve/injection for authUser and User
 
 ## Usage
 

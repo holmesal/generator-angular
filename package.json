@@ -11,7 +11,7 @@
     "app",
     "angular"
   ],
-  "author": "The Yeoman Team",
+  "author": "Alonso Holmes & The Yeoman Team",
   "main": "app/index.js",
   "repository": "holmesal/generator-realtime",
   "scripts": {
