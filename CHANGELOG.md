@@ -1,4 +1,57 @@
 <a name="0.8.0"></a>
+## 0.8.0 (2014-04-23)
+
+
+#### Bug Fixes
+
+* **Gruntfile:** fix usemin bug when using images in css ([fac3d108](yeoman/generator-realtime/commit/fac3d1082a2c2120b9f92b86747c26b1421bd942))
+* **app:**
+  * prevent faulty bowerInstall ignorePath ([fa2e36b8](yeoman/generator-realtime/commit/fa2e36b8874cc21c74dc0a740d6ece580c4f0f1f))
+  * Remove redundant bootstrap-sass import ([229e58ae](yeoman/generator-realtime/commit/229e58aeca71a077f71ac60ae4eebd3b04b30889))
+  * correct adding scripts path to index.html ([5533ad86](yeoman/generator-realtime/commit/5533ad86676dab3e165c4a298f7e6428759e7c18))
+  * change "Twitter Bootstrap" to "Bootstrap" ([55a79718](yeoman/generator-realtime/commit/55a797182cea37501bcdb1622ebb3cf4b578534b))
+  * change the script src to lowercase ([c884c91d](yeoman/generator-realtime/commit/c884c91d1dba8e47d27a80857ad33bdd33ca7a7f), closes [#557](yeoman/generator-realtime/issues/557))
+* **build:**
+  * grunt-newer requires a src attribute ([6165b810](yeoman/generator-realtime/commit/6165b8101f11ef37811305e6e5dd269da52a3ef2), closes [#620](yeoman/generator-realtime/issues/620))
+  * add src property to jshint task ([4668e702](yeoman/generator-realtime/commit/4668e7028c803da8ae4cdfadce5d7ec99f51843b), closes [#620](yeoman/generator-realtime/issues/620))
+  * don't copy the bower_components folder in build ([4c53ea97](yeoman/generator-realtime/commit/4c53ea975d3a776c416e078389a2657ec4e56ac0), closes [#590](yeoman/generator-realtime/issues/590))
+  * rewrite relative CSS URLs ([996eff82](yeoman/generator-realtime/commit/996eff82b0bd11976daf997c69e12dcdcd643683))
+* **docs:** add info about route generator uri option ([fc4bdc5f](yeoman/generator-realtime/commit/fc4bdc5fa46677d381aaabacbd1c76f38153cdba), closes [#650](yeoman/generator-realtime/issues/650))
+* **generator:**
+  * require compass only when enabled ([d4630c33](yeoman/generator-realtime/commit/d4630c3307df2f55d21753c3e8ed1fe6d232b44b))
+  * list coffee dep only when selected ([c9a69807](yeoman/generator-realtime/commit/c9a69807ee18517f973161d3902421b2bee4782e))
+  * add closing template tag ([3522514f](yeoman/generator-realtime/commit/3522514f999c791e2114483cd8a39a172c794a74))
+  * add closing template tag ([0f57d2c4](yeoman/generator-realtime/commit/0f57d2c4b8a9686d836faeee08ee7caa7f05a507))
+* **template:** remove IE edge header ([01738116](yeoman/generator-realtime/commit/017381168132c8d560a3976c0b97b15a4f120727))
+* **test:** update assertFile syntax ([51e46455](yeoman/generator-realtime/commit/51e4645524684e7220ccece1800899d2b87a45e6), closes [#554](yeoman/generator-realtime/issues/554))
+
+
+#### Features
+
+* **app:**
+  * specify uri while generating routes ([d3cea019](yeoman/generator-realtime/commit/d3cea019117d975194c36c46c0489ea5e97b81dd), closes [#639](yeoman/generator-realtime/issues/639))
+  * add glyphicon to test bootstrap fonts ([953a93b6](yeoman/generator-realtime/commit/953a93b6dbbfc25f1b5f536e5ddaeeb8b1a24759))
+  * remove minsafe options ([c24e2509](yeoman/generator-realtime/commit/c24e25097acb109240f687ace7c214b095d3ee77), closes [#452](yeoman/generator-realtime/issues/452))
+* **build:** use bowerInstall on `watch` task ([6fbebb05](yeoman/generator-realtime/commit/6fbebb057962edc8daf421c858f82f33abe66125))
+* **deps:**
+  * upgrade AngularJS version ([6c540961](yeoman/generator-realtime/commit/6c5409613b30dc37d845cb8aa040760f885f34af))
+  * use official Sass version of Bootstrap ([66829f45](yeoman/generator-realtime/commit/66829f453ec5fe48dbf4e75f5bc312bb06bc9ace), closes [#607](yeoman/generator-realtime/issues/607))
+  * upgrade AngularJS + addons to 1.2.14 ([b4d026f3](yeoman/generator-realtime/commit/b4d026f350ba1e8ce087fff66d476c72dd505b60))
+  * upgrade to grunt-bower-install 1.0 ([6a167895](yeoman/generator-realtime/commit/6a1678953bce069b4ac79f68e0959e80cbdbaa3f))
+  * upgrade to Angular 1.2.10 ([023da9d2](yeoman/generator-realtime/commit/023da9d2327f90e3128e1e7aecf73d0bc1e2660d))
+
+
+#### Breaking Changes
+
+* bower_components is no longer copied into the /dist
+folder.
+ ([4c53ea97](yeoman/generator-realtime/commit/4c53ea975d3a776c416e078389a2657ec4e56ac0))
+* Removes the --minsafe from the generator. See the
+readme for more information about this change
+ ([c24e2509](yeoman/generator-realtime/commit/c24e25097acb109240f687ace7c214b095d3ee77))
+
+
+<a name="0.8.0"></a>
 ## 0.8.0 (2014-03-27)
 
 
@@ -180,7 +233,7 @@ readme for more information about this change
 
 #### Bug Fixes
 
-* **cli:** fix typo in angular:view generator usage ([d62c2e34](http://github.com/yeoman/generator-realtime/commit/d62c2e348bcc61a6794ca23df02b6cce3c79d993))
+* **cli:** fix typo in realtime:view generator usage ([d62c2e34](http://github.com/yeoman/generator-realtime/commit/d62c2e348bcc61a6794ca23df02b6cce3c79d993))
 * **coffee:**
   * remove extraneous commas and returns ([6df875cd](http://github.com/yeoman/generator-realtime/commit/6df875cd7167aa4a4e9f98a82d2f7fba98a20b0b))
   * remove the semi-colon from the coffee script templates ([cd46aa88](http://github.com/yeoman/generator-realtime/commit/cd46aa88953e60d81dfef64b999f751dc4468ab7))
@@ -270,7 +323,7 @@ readme for more information about this change
 
 * **test:** Updated tests for new prompt ([64e57571](http://github.com/yeoman/generator-realtime/commit/64e57571))
 
-* **cli:** fix typo in angular:constant generator usage ([6cbb80fd](http://github.com/yeoman/generator-realtime/commit/6cbb80fd))
+* **cli:** fix typo in realtime:constant generator usage ([6cbb80fd](http://github.com/yeoman/generator-realtime/commit/6cbb80fd))
 
 <a name="v0.2.2"></a>
 ## v0.2.2 (2013-04-20)

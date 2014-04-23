@@ -1,8 +1,8 @@
 'use strict'
 
 angular.module('<%= scriptAppName %>')
-  .controller '<%= classedName %>Ctrl', ($scope, $rootScope, $firebase) ->
+.controller '<%= classedName %>Ctrl', ($scope, $rootScope, $firebase) ->
 
-  	# Last reference
-  	lastRef = new Firebase "#{$rootScope.firebaseURL}/last"
-  	$scope.last = $firebase lastRef
+	# Last reference
+	bitcoinRef = new Firebase $rootScope.firebaseURL
+	$scope.bitcoin = $firebase bitcoinRef

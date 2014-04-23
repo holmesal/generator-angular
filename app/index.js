@@ -46,15 +46,15 @@ var Generator = module.exports = function Generator(args, options) {
     this.env.options.coffee = this.options.coffee;
   }
 
-  this.hookFor('angular:common', {
+  this.hookFor('realtime:common', {
     args: args
   });
 
-  this.hookFor('angular:main', {
+  this.hookFor('realtime:main', {
     args: args
   });
 
-  this.hookFor('angular:controller', {
+  this.hookFor('realtime:controller', {
     args: args
   });
 
@@ -106,7 +106,7 @@ Generator.prototype.welcome = function welcome() {
   if (!this.options['skip-welcome-message']) {
     console.log(this.yeoman);
     console.log(
-      'Out of the box I include Bootstrap and some AngularJS recommended modules.\n'
+      'Out of the box I include AngularJS, Bootstrap, and Firebase.\n'
     );
 
     // Removed notice for minsafe

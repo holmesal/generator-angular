@@ -13,7 +13,7 @@
   ],
   "author": "The Yeoman Team",
   "main": "app/index.js",
-  "repository": "yeoman/generator-realtime",
+  "repository": "holmesal/generator-realtime",
   "scripts": {
     "test": "mocha"
   },
