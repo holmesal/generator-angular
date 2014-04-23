@@ -3,6 +3,9 @@
 <% } %>// bower:scss
 // endbower
 
+// Better colors
+@import "../bower_components/colors/sass/colors.scss";
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
