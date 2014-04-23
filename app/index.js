@@ -113,7 +113,7 @@ Generator.prototype.welcome = function welcome() {
     if (this.options.minsafe) {
       console.warn(
         '\n** The --minsafe flag has been removed. For more information, see ' +
-        'https://github.com/yeoman/generator-angular#minification-safe. **\n'
+        'https://github.com/yeoman/generator-realtime#minification-safe. **\n'
       );
     }
   }

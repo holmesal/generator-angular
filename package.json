@@ -1,7 +1,7 @@
 {
-  "name": "generator-angular",
+  "name": "generator-realtime",
   "version": "0.8.0",
-  "description": "Yeoman generator for AngularJS",
+  "description": "Yeoman generator for AngularJS + Firebase",
   "keywords": [
     "yeoman-generator",
     "scaffold",
@@ -13,7 +13,7 @@
   ],
   "author": "The Yeoman Team",
   "main": "app/index.js",
-  "repository": "yeoman/generator-angular",
+  "repository": "yeoman/generator-realtime",
   "scripts": {
     "test": "mocha"
   },
