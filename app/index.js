@@ -210,7 +210,7 @@ Generator.prototype.askForModules = function askForModules() {
     }
 
     // Not sure that this is the right place to add a module, but here we go
-    angMods.push "'firebase'"
+    angMods.push("'firebase'");
 
     if (angMods.length) {
       this.env.options.angularDeps = '\n    ' + angMods.join(',\n    ') + '\n  ';
