@@ -134,6 +134,21 @@ Generator.prototype.askForCompass = function askForCompass() {
   }.bind(this));
 };
 
+Generator.prototype.askForClassy = function askForClassy() {
+  var cb = this.async();
+
+  this.prompt([{
+    type: 'confirm',
+    name: 'classy',
+    message: 'Would you like your controllers to be Classy?',
+    default: true
+  }], function (props) {
+    this.classy = props.classy;
+
+    cb();
+  }.bind(this));
+};
+
 Generator.prototype.askForBootstrap = function askForBootstrap() {
   var compass = this.compass;
   var cb = this.async();
