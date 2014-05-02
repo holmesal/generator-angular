@@ -144,6 +144,7 @@ Generator.prototype.askForClassy = function askForClassy() {
     default: true
   }], function (props) {
     this.classy = props.classy;
+    this.env.options.classy = true;
 
     cb();
   }.bind(this));
@@ -224,8 +225,13 @@ Generator.prototype.askForModules = function askForModules() {
       this.env.options.ngRoute = true;
     }
 
-    // Not sure that this is the right place to add a module, but here we go
+    // We're always going to include firebase
     angMods.push("'firebase'");
+
+    // We might include classy, if they've selected it
+    if (this.classy) {
+      angMods.push("'classy'");
+    }
 
     if (angMods.length) {
       this.env.options.angularDeps = '\n    ' + angMods.join(',\n    ') + '\n  ';

@@ -16,6 +16,7 @@ var Generator = module.exports = function Generator() {
 util.inherits(Generator, ScriptBase);
 
 Generator.prototype.createControllerFiles = function createControllerFiles() {
+  this.classy = this.env.options.classy;
   this.generateSourceAndTest(
     'controller',
     'spec/controller',

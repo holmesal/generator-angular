@@ -1,5 +1,5 @@
 'use strict'
-<% if (ngRoute) { %>
+<% if (classy) { %>
 angular.module('<%= scriptAppName %>')
 .controller '<%= classedName %>Ctrl', ($scope, $rootScope, $firebase) ->
 
