@@ -1,17 +1,18 @@
-# Realtime generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-realtime.svg?branch=master)](http://travis-ci.org/yeoman/generator-realtime)
+# generator-realtime
 
-> Yeoman generator for AngularJS + Firebase - lets you quickly set up a project with sensible defaults and best practises.
+> Yeoman generator for AngularJS + Firebase, with a couple of extras.
 
-## Cool things in generator-realtime (differences from generator-angular)
-# angular-fire
+## What's in the box?
+
+### angular-fire
 [angular-fire](https://www.firebase.com/quickstart/angularjs.html) is included by default. A main firebase URL is set on $rootScope, and the $firebase service is injected into controllers.
 
-# Firebase route resolvers
+### firebaseResolver
 A service called `firebaseResolver` is included, which is a route resolver that plays nicely with $firebase and $firebaseSimpleAuth.
 
 ``` TODO - document this!```
 
-# Classy controllers
+### Classy controllers
 [Classy](http://davej.github.io/angular-classy/) is used for controllers, which look like this in generator-realtime:
 ```coffeescript
 'use strict'
@@ -32,13 +33,13 @@ angular.module('gentestApp').classy
     @$.bitcoin = @$firebase bitcoinRef
 ```
 
-# Better default colors
-[Colors.css]()
+### Better default colors
+[Colors.css](https://github.com/mrmrs/colors) contains some nice-looking versions of default web colors. Just use `color: $red` instead of `color: red`
 
-# Easy-mode animations
+### Easy-mode animations
 [Animate.sass](https://github.com/tgdev/animate-sass) is the sass version of the popular [Animate.css](http://daneden.github.io/animate.css/), and adds the ability to only import certain animations to cut down on size a bit. If you want to use an animation, make sure to turn it on first, like so:
 
-```
+```scss
 $use-fadeInUp: true;
 
 // bower:scss
@@ -46,23 +47,21 @@ $use-fadeInUp: true;
 // endbower
 ```
 
-** Make sure to do this before the `bower:scss` section**
+**Make sure to do this before the `bower:scss` section**
+
 See [the animate-sass settings file](https://github.com/tgdev/animate-sass/blob/master/helpers/_settings.scss) for a list of variable names.
 
 # Danger! Danger! High voltage!
-Currently, this **only supports coffeescript**. Once the dust settles a little bit, I'll build out the javascript templates as well. Also, animate-sass and colors.scss are only really applicable if you're using sass.
+Currently, this **only supports coffeescript**. Once the dust settles a little bit, I'll build out the javascript templates as well. Also, animate-sass and colors.scss are **only really applicable if you're using sass**.
 
 And of course, feel free to send a pull request :)
 
-
-* Scaffolds out with firebase included
-* Uses html5 mode by default
-
-## Dangerous things
-* Only implemented for coffeescript so far.
-
 ## TODO
-* Add router resolve/injection for authUser and User
+* Add firebaseResolver
+* Add HTML5 mode by default
+* Add .nginx file and symlink www -> dist/ for dokku deployment
+
+# Generator readme:
 
 ## Usage
 
