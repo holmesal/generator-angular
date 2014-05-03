@@ -143,8 +143,7 @@ Generator.prototype.askForClassy = function askForClassy() {
     message: 'Would you like your controllers to be Classy?',
     default: true
   }], function (props) {
-    this.classy = props.classy;
-    this.env.options.classy = true;
+    this.classy = this.env.options.classy = props.classy;
 
     cb();
   }.bind(this));

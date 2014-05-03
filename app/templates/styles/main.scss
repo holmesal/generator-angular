@@ -3,8 +3,9 @@
 <% } %>// bower:scss
 // endbower
 
-// Better colors
-@import "../bower_components/colors/sass/colors.scss";
+// All animations are turned off in bower_components/animate-sass/helpers/_settings.scss by default to save space.
+// Override them lika-so to use specific animations:
+$use-fadeInUp: true;
 
 .browsehappy {
     margin: 0.2em 0;
@@ -55,6 +56,7 @@ body {
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
+    @include animation-delay(0.3s);
 }
 
 .jumbotron .btn {
@@ -65,6 +67,7 @@ body {
 /* Supporting marketing content */
 .marketing {
     margin: 40px 0;
+    @include animation-delay(0.6s);
 }
 
 .marketing p + h4 {
@@ -93,3 +96,4 @@ body {
         border-bottom: 0;
     }
 }
+

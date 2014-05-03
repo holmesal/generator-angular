@@ -12,9 +12,10 @@
     "angular-cookies": "1.2.15"<% } %><% if (sanitizeModule) { %>,
     "angular-sanitize": "1.2.15"<% } %><% if (routeModule) { %>,
     "angular-route": "1.2.15"<% } %>,
-    "colors": "~0.2.0",
     "angularfire": "~0.7.1",
-    "angular-classy": "~0.4.2"
+    "angular-classy": "~0.4.2",
+    "colors": "git@github.com:holmesal/colors.git",
+    "animate-sass": "git@github.com:tgdev/animate-sass.git#17d186c5d6ccfa310512d84ab27ac400bf969b89"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
