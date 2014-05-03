@@ -18,5 +18,5 @@ angular
 
     # Log any route change errors
     $rootScope.$on '$routeChangeError', (event, current, previous, rejection) ->
-      console.log 'failed to change route - redirecting to landing'
-      console.log rejection
+      console.error 'failed to change route'
+      console.error rejection
