@@ -7,8 +7,8 @@
 ### angular-fire
 [angular-fire](https://www.firebase.com/quickstart/angularjs.html) is included by default. A main firebase URL is set on $rootScope, and the $firebase service is injected into controllers.
 
-### firebaseResolver
-A service called `firebaseResolver` is included, which is a route resolver that plays nicely with $firebase and $firebaseSimpleAuth.
+### firesolver
+A service called `firesolver` is included, which is a route resolver that plays nicely with $firebase and $firebaseSimpleAuth.
 
 ``` TODO - document this!```
 
@@ -140,8 +140,41 @@ yo realtime:route myRoute --uri=my/route
 Produces controller and view as above and adds a route to `app/scripts/app.js`
 with URI `my/route`
 
+**Resolve route with data from firebase and inject into controller**
+
+(not currently available for javascript)
+
+Example:
+```bash
+yo realtime:route myRoute --resolve
+```
+
+Produces controller, view, and route as above, and adds a resolve function that attempts
+to fetch data from firebase. If that data is found, it is injected into the generated controller.
+If not, the route change fails and an error will be thrown on `$rootScope` called `routeChangeError`
+
+**Only allow authenticated users to access route**
+
+Example:
+```bash
+yo realtime:route myRoute --authenticated
+```
+
+Produces controller, view, and route as above, and adds a resolve function that ensures that the current user is authenticated. If the user is not logged in, the route change fails and an error will be thrown 
+on `$rootScope` called `routeChangeError`
+
+**All of the things**
+
+Example:
+```bash
+yo realtime:route myRoute --resolve --authenticated
+```
+
+
 ### Controller
 Generates a controller in `app/scripts/controllers`.
+
+Remembers if you asked to use Classy when scaffolding the app.
 
 Example:
 ```bash

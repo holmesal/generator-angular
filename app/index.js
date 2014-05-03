@@ -227,6 +227,9 @@ Generator.prototype.askForModules = function askForModules() {
     // We're always going to include firebase
     angMods.push("'firebase'");
 
+    // As well as the firebase resolver
+    angMods.push("'holmesal.firesolver'");
+
     // We might include classy, if they've selected it
     if (this.classy) {
       angMods.push("'classy'");

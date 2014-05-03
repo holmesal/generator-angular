@@ -46,6 +46,15 @@ var Generator = module.exports = function Generator() {
     this.env.options.coffee = this.options.coffee;
   }
 
+  this.env.options.classy = this.options.classy;
+  if (typeof this.env.options.classy === 'undefined') {
+    this.option('classy');
+    console.log('checking for classy files!');
+    if (this.expandFiles(path.join(this.env.options.appPath, '/bower_components/angular-classy/*'), {}).length > 0) {
+      this.env.options.classy = this.options.classy = true
+    }
+  }
+
   var sourceRoot = '/templates/javascript';
   this.scriptSuffix = '.js';
 
