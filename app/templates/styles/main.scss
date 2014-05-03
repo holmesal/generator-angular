@@ -1,11 +1,14 @@
 <% if (compassBootstrap) { %>$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
-<% } %>// bower:scss
-// endbower
+<% } %>
 
 // All animations are turned off in bower_components/animate-sass/helpers/_settings.scss by default to save space.
 // Override them lika-so to use specific animations:
 $use-fadeInUp: true;
+
+// bower:scss
+// endbower
+
 
 .browsehappy {
     margin: 0.2em 0;
@@ -18,6 +21,17 @@ $use-fadeInUp: true;
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    -webkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
+}
+
+/* Base style for animations */
+.animated {
+    @include prefixer(animation-duration, $base-duration);
+    @include prefixer(animation-fill-mode, both);   
+
+    &.hinge {
+        @include prefixer(animation-duration, $base-duration * 2);
+    }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

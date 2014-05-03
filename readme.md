@@ -32,10 +32,25 @@ angular.module('gentestApp').classy
     @$.bitcoin = @$firebase bitcoinRef
 ```
 
+# Better default colors
+[Colors.css]()
 
+# Easy-mode animations
+[Animate.sass](https://github.com/tgdev/animate-sass) is the sass version of the popular [Animate.css](http://daneden.github.io/animate.css/), and adds the ability to only import certain animations to cut down on size a bit. If you want to use an animation, make sure to turn it on first, like so:
+
+```
+$use-fadeInUp: true;
+
+// bower:scss
+// ... some bower stuff
+// endbower
+```
+
+** Make sure to do this before the `bower:scss` section**
+See [the animate-sass settings file](https://github.com/tgdev/animate-sass/blob/master/helpers/_settings.scss) for a list of variable names.
 
 # Danger! Danger! High voltage!
-Currently, this **only supports coffeescript**. Once the dust settles a little bit, I'll build out the javascript templates as well.
+Currently, this **only supports coffeescript**. Once the dust settles a little bit, I'll build out the javascript templates as well. Also, animate-sass and colors.scss are only really applicable if you're using sass.
 
 And of course, feel free to send a pull request :)
 
