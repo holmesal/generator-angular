@@ -34,15 +34,15 @@ Generator.prototype.rewriteAppJs = function () {
   };
 
   // Add a resolve function if necessary
-  var resolveVariable = 'id'
-  var addedResolve = false
+  var resolveVariable = 'id';
+  var addedResolve = false;
 
-  this.injectString = {classy: '', angular: ''}
+  this.injectString = {classy: '', angular: ''};
 
   if (this.options.resolve) {
-    addedResolve = true
+    addedResolve = true;
     // Add the resolve variable to the URI
-    this.uri = this.uri + '/:id'
+    this.uri = this.uri + '/:id';
     // Add a stubbed-out resolve function
     config.splicable = config.splicable.concat("  resolve: ");
     config.splicable = config.splicable.concat("    "+this.name+": (firesolver, $route) ->");

@@ -51,7 +51,7 @@ var Generator = module.exports = function Generator() {
     this.option('classy');
     console.log('checking for classy files!');
     if (this.expandFiles(path.join(this.env.options.appPath, '/bower_components/angular-classy/*'), {}).length > 0) {
-      this.env.options.classy = this.options.classy = true
+      this.env.options.classy = this.options.classy = true;
     }
   }
 

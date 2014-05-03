@@ -19,7 +19,7 @@ Generator.prototype.createControllerFiles = function createControllerFiles() {
   this.classy = this.env.options.classy;
   this.injectString = this.env.options.injectString;
   if (!this.injectString){
-    this.injectString = {angular: '', classy: ''}
+    this.injectString = {angular: '', classy: ''};
   }
   this.generateSourceAndTest(
     'controller',
