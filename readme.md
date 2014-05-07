@@ -57,9 +57,10 @@ Currently, this **only supports coffeescript**. Once the dust settles a little b
 And of course, feel free to send a pull request :)
 
 ## TODO
-* Add firebaseResolver
+* Add firesolver
 * Add HTML5 mode by default
 * Add .nginx file and symlink www -> dist/ for dokku deployment
+* Convert resolve function to long syntax: ['Firesolver', (Firesolver) -> Firesolver.get('something')]
 
 # Generator readme:
 
